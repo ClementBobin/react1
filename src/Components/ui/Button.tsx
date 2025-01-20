@@ -14,6 +14,8 @@ export const Button: FC<ButtonProps> = ({ action }) => {
             <input
                 type="number"
                 defaultValue={inputValue}
+                // q6: react class
+                className={"table"}
                 onChange={(e) => inputValue = Number(e.target.value)}
             />
             <button onClick={() => {
