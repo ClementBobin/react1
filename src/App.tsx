@@ -1,19 +1,28 @@
 // src/App.tsx
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 import { TeamList } from './Components/ui/TeamList';
 import { PlayersList } from './Components/ui/PlayersList';
 import { TeamModel } from '@/lib/classes/Team';
 import { Title } from './Components/ui/Title';
-
-const teams: TeamModel[] = [
-  { team: 'Team A', description: 'Description for Team A', players: ['Player 1', 'Player 2'] },
-  { team: 'Team B', description: 'Description for Team B', players: ['Player 3', 'Player 4'] },
-  { team: 'Team C', description: 'Description for Team C', players: ['Player 5', 'Player 6'] }
-];
+import { fetchDataFromAPI } from './lib/api.ts';
 
 const App = () => {
+  const [teams, setTeams] = useState<TeamModel[]>([]);
   const [selectedTeam, setSelectedTeam] = useState<TeamModel | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchDataFromAPI('http://localhost:5000/api/data/teams');
+        setTeams(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const handleTeamSelect = (teamName: string) => {
     const team = teams.find(t => t.team === teamName) || null;
