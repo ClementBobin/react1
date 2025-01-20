@@ -7,6 +7,7 @@ Club.propTypes = {
     isLigue1: PropTypes.bool.isRequired,
 };
 
+// Q2: props give to children
 export function Club({ id, name, children, isLigue1 }) {
     return (
         <>
