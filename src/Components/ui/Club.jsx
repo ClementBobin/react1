@@ -8,6 +8,7 @@ Club.propTypes = {
 };
 
 // Q2: props give to children
+// Q3:
 export function Club({ id, name, children, isLigue1 }) {
     return (
         <>
