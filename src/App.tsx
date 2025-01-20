@@ -1,4 +1,3 @@
-// src/App.tsx
 import { useState, useEffect } from 'react';
 import './App.css';
 import { TeamList } from './Components/ui/TeamList';
@@ -15,7 +14,12 @@ const App = () => {
     const fetchData = async () => {
       try {
         const data = await fetchDataFromAPI('http://localhost:5000/api/data/teams');
-        setTeams(data);
+        // Extract the teams array from the response object
+        if (data && Array.isArray(data.teams)) {
+          setTeams(data.teams); // Set the teams array
+        } else {
+          console.error('Fetched data is not in the expected format:', data);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -31,7 +35,7 @@ const App = () => {
 
   return (
       <div className="text-center p-4">
-        <Title text="Teams and Players" className="text-2xl font-bold mb-4 border-black border-b-2"/>
+        <Title text="Teams and Players" className="text-2xl font-bold mb-4 border-black border-b-2" />
         <section className="flex flex-row text-center justify-center content-between gap-2">
           <TeamList onTeamSelect={handleTeamSelect} teamList={teams} />
           <PlayersList players={selectedTeam ? selectedTeam.players : []} />

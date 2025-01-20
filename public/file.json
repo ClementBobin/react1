@@ -1,0 +1,44 @@
+{
+  "teams": [
+    {
+      "team": "Manchester United",
+      "description": "A professional football club based in Manchester, England.",
+      "players": ["David de Gea", "Harry Maguire", "Bruno Fernandes"]
+    },
+    {
+      "team": "Real Madrid",
+      "description": "A professional football club based in Madrid, Spain.",
+      "players": ["Thibaut Courtois", "Sergio Ramos", "Karim Benzema"]
+    },
+    {
+      "team": "FC Barcelona",
+      "description": "A professional football club based in Barcelona, Spain.",
+      "players": ["Marc-André ter Stegen", "Gerard Piqué", "Lionel Messi"]
+    },
+    {
+      "team": "Bayern Munich",
+      "description": "A professional football club based in Munich, Germany.",
+      "players": ["Manuel Neuer", "Thomas Müller", "Robert Lewandowski"]
+    },
+    {
+      "team": "Juventus",
+      "description": "A professional football club based in Turin, Italy.",
+      "players": ["Wojciech Szczęsny", "Leonardo Bonucci", "Cristiano Ronaldo"]
+    },
+    {
+      "team": "Paris Saint-Germain",
+      "description": "A professional football club based in Paris, France.",
+      "players": ["Keylor Navas", "Marquinhos", "Kylian Mbappé"]
+    },
+    {
+      "team": "Liverpool",
+      "description": "A professional football club based in Liverpool, England.",
+      "players": ["Alisson Becker", "Virgil van Dijk", "Mohamed Salah"]
+    },
+    {
+      "team": "Chelsea",
+      "description": "A professional football club based in London, England.",
+      "players": ["Edouard Mendy", "Thiago Silva", "N'Golo Kanté"]
+    }
+  ]
+}

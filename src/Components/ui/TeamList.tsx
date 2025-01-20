@@ -8,12 +8,11 @@ interface TeamsListProps {
 }
 
 export const TeamList = ({ teamList, onTeamSelect }: TeamsListProps) => {
-
     return (
         <div className="mt-4 basis-1/2">
             <ul className="list-none">
                 {teamList.map((team) => (
-                    <Team key={team.team} team={team.team} onTeamSelect={onTeamSelect} />
+                    <Team key={team.team} team={team.team} description={team.description} onTeamSelect={onTeamSelect} />
                 ))}
             </ul>
         </div>
