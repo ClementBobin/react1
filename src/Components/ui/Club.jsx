@@ -10,6 +10,7 @@ Club.propTypes = {
 // Q2: props give to children
 
 export function Club({ id, name, children, isLigue1 }) {
+    // Q7: id = 7 is imuable
     return (
         <>
             {isLigue1 && (
