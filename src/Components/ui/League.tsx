@@ -1,6 +1,6 @@
 import {Club} from "./Club.jsx";
 
-// Q2
+// Q2 : fct
 export function League() {
     return (
         <>
